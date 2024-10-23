@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+nav {
+  width: 100%;
+  padding: 20px 0;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: -1px 12px 24px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-all-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav-all-content .logo {
+  width: 30%;
+}
+
+.nav-all-content .logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-all-content .logo a .green {
+  color: #1bbd36;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-all-content .nav-links {
+  text-align: right;
+  width: 80%;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.nav-links ul li .active-link {
+  color: #1bbd36;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.nav-links ul li .inactive-links {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.content {
+  display: inline-block;
+}
+
+.content:hover .under-content {
+  display: block;
+}
+
+.under-content {
+  background-color: white;
+  display: none;
+  position: absolute;
+  border-top: 2px solid #1bbd36;
+  z-index: 1;
+}
+
+.under-content a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.under-content a:hover {
+  color: #1bbd36;
+}
+
+.content-1 {
+  display: inline-block;
+}
+
+.content-1:hover .under-content-1 {
+  display: block;
+}
+
+.under-content-1 {
+  width: 150px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  right: -150px;
+  top: 100px;
+  border-top: 2px solid #1bbd36;
+  z-index: 1;
+}
+
+.under-content-1 a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.under-content-1 a:hover {
+  color: #1bbd36;
+}
+
+.nav-links ul li .inactive-links:hover {
+  color: #1bbd36;
+}
+
+.nav-links ul li .top-icons {
+  color: darkgray;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0px 8px;
+  display: block;
+}
+
+.nav-links ul li .top-icons:hover {
+  color: #1bbd36;
+}
+  .breadcrumbs {
+    padding: 15px 0;
+    background: #1bbd36;
+    min-height: 40px;
+    margin-top: 72px;
+  
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    
+}
+.align-items-center1 {
+    align-items: center !important;
+}
+
+.justify-content-between1 {
+    justify-content: space-between !important;
+}
+.d-flex1 {
+    display: flex !important;
+    width: 80%;
+    margin: auto;
+}
+.breadcrumbs h2 {
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+    
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.breadcrumbs ol .li+li {
+    padding-left: 10px;
+}
+.breadcrumbs ol .li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #fff;
+    content: "/";
+}
+a{
+   text-decoration: none;
+   color: #fff;
+}  
+/* .div1{
+    display: grid;
+     grid-template-columns:auto auto auto auto ;
+     gap: 15px; 
+    margin-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+.div2{
+    padding: 20px;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+     
+} */
+/* h3{
+ font-weight: 400;
+ margin: -20px -20px 20px -20px;
+ padding: 20px 15px;
+ font-size: 16px;
+ font-weight: 600;
+ color: #847872;
+ background: #f8f8f8;
+} */
+.ull{
+    padding: 0;
+    list-style: none;
+    color: #4d4643;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+.ull li{
+    padding-bottom: 16px;
+}
+.na {
+    color: #ccc;
+    text-decoration: line-through;
+}
+.btn-wrap {
+    margin: 20px -20px -20px -20px;
+    padding: 20px 15px;
+    background: #f8f8f8;
+    text-align: center;
+}
+.btn-buy {
+    background: #1bbd36;
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 4px;
+    color: #fff;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+}
+.btn-buy a{
+    color: white;
+}
+.btn-buy:hover {
+    background: #2ae149;
+}
+ .div2 h4 sup{
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+}
+.box1{
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    margin: 15px;
+}
+#h3{
+    font-weight: 400;
+    margin: -20px -20px 20px -20px;
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #847872;
+    background: #f8f8f8;
+}
+#h33{
+    font-weight: 400;
+    margin: -20px -20px 20px -20px;
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #847872;
+    background: #f8f8f8;
+}
+#h4{
+    font-size: 36px;
+    color: #1bbd36;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+}
+#h4 sup{
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+}
+#h4 span{
+    color: #bababa;
+    font-size: 16px;
+    font-weight: 300;
+}
+.ull{
+    padding: 0;
+    list-style: none;
+    color: #4d4643;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+} 
+.ull li{
+    padding-bottom: 16px;
+}
+ .na {
+    color: #ccc;
+    text-decoration: line-through;
+}
+.btn-wrap1{
+margin: 20px -20px -20px -20px;
+    padding: 20px 15px;
+    background: #f8f8f8;
+    text-align: center;
+}
+.btn-buy1 {
+    background: #1bbd36;
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 4px;
+    color: #fff;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.free{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+#h33{
+    color: #fff;
+    background: #1bbd36;
+}
+.twitter{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.facebook{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.linkedin{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.instagram{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.button1{
+    width: 65px;
+    background-color: #1bbd36;
+    position: sticky;
+    left: 90%;
+    bottom: 3%; 
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+</style>
+<body>
+   
+    
+
+
+    <nav>
+        <div class="nav-all-content">
+          <div class="logo">
+            <a href="index.html"><span class="green">COM</span>PANY</a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li><a class="active-link" href="index.html">HOME</a></li>
+              <li class="content">
+                <a class="inactive-links" href="index.html"
+                  >ABOUT <i class="fa-solid fa-caret-down"></i
+                ></a>
+                <div class="under-content">
+                  <div class="under-item"><a href="about Us.html">About Us</a></div>
+                  <div class="under-item"><a href="team.html">Team</a></div>
+                  <div class="nuder-item"><a href="testimonials.html">Testemonials</a></div>
+                  <div class="under-item content-1">
+                    <a href="#"
+                      >Deep Drop Down <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                    <div class="under-content-1">
+                      <div class="under-item">
+                        <a href="#">Deep Drop Down1</a>
+                      </div>
+                      <div class="under-item">
+                        <a href="#">Deep Drop Down2</a>
+                      </div>
+                      <div class="nuder-item">
+                        <a href="#">Deep Drop Down3</a>
+                      </div>
+                      <div class="under-item">
+                        <a href="#">Deep Drop Down4</a>
+                      </div>
+                      <div class="under-item">
+                        <a href="#">Deep Drop Down5</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a class="inactive-links" href="services.html">SERVICES</a></li>
+              <li>
+                <a class="inactive-links" href="portfolio.html">PORTFOLIO</a>
+              </li>
+              <li><a class="inactive-links" href="pricing.html">PRICING</a></li>
+              <li><a class="inactive-links" href="blog.html">BLOG</a></li>
+              <li><a class="inactive-links" href="contact.html">CONTACT</a></li>
+              |
+              <li>
+                <a class="top-icons" href="#"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a class="top-icons" href="#"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a class="top-icons" href="#"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a class="top-icons" href="#"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container1">
+         <div class="d-flex1 justify-content-between1 align-items-center1">
+          <h2>PRICING</h2>
+          <ol>
+           <li class="li"><a href="index.html">HOME</a></li>
+           <li class="li"><a href="Pricing.html"></a>PRICING</li>
+          </ol>
+         </div>
+        </div>
+       </section>
+
+
+       <section class="section2" id="index" >
+
+
+       <div class="free">
+        <div class="box1">
+            <h3 id="h3">Free</h3>
+            <h4 id="h4"><sup>$</sup>0 <span> / month</span></h4>
+            <ul class="ull">
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap1">
+             <a href="#" class="btn-buy1">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h3 id="h33">Business</h3>
+            <h4 id="h4"><sup>$</sup>19 <span> / month</span></h4>
+            <ul class="ull">
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li >Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap1">
+             <a href="#" class="btn-buy1">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h3 id="h3">Developer</h3>
+            <h4 id="h4"><sup>$</sup>29 <span> / month</span></h4>
+            <ul class="ull">
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li >Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap1">
+             <a href="#" class="btn-buy1">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <h3 id="h3">Ultimate</h3>
+            <h4 id="h4"><sup>$</sup>49 <span> / month</span></h4>
+            <ul class="ull">
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li >Pharetra massa</li>
+                <li >Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap1">
+             <a href="#" class="btn-buy1">Buy Now</a>
+            </div>
+        </div>
+       </div>
+<br>
+<br>
+<br>
+  
+<footer style="background-color: #222; color: #fff; padding: 20px 0;">
+    <div style="display: flex; justify-content: space-between; max-width: 1200px; margin: auto; padding: 0 20px;">
+  
+      <!-- Company Info Section -->
+      <div style="flex: 1;">
+        <h3>COMPANY</h3><br>
+        <p style="color: rgba(255, 255, 255, 0.6);">A108 Adam Street<br><br>New York, NY 535022<br><br>United States</p><br>
+        <p style="color: rgba(255, 255, 255, 0.6);"><strong>Phone:</strong> +1 5589 55488 55<br><br>
+        <strong style="color: rgba(255, 255, 255, 0.6);">Email:</strong> info@example.com</p>
+      </div>
+  
+      <!-- Useful Links Section -->
+      <div style="flex: 1;">
+        <h4>Useful Links</h4><br>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="home.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Home</a></li><br>
+          <li><a href="about.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">About us</a></li><br>
+          <li><a href="services.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Services</a></li><br>
+          <li><a href="Terms of service.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Terms of service</a></li><br>
+          <li><a href="Privacy policy.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Privacy policy</a></li><br>
+        </ul>
+      </div>
+  
+      <!-- Services Section -->
+      <div style="flex: 1;">
+        <h4>Our Services</h4><br>
+        <ul style="list-style: none; padding: 0;color: rgba(255, 255, 255, 0.6);transition: 0.3s;">
+          <li><a href="Web Design.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Web Design</a></li><br>
+          <li><a href="Web Development.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Web Development</a></li><br>
+          <li><a href="Product Management.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Product Management</a></li><br>
+          <li><a href="Marketing.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Marketing</a></li><br>
+          <li><a href="Graphic Design.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Graphic Design</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div style="flex: 1;">
+        <h4>Join Our Newsletter</h4><br><br>
+        <p style="color: rgba(255, 255, 255, 0.6)">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p><br><br><br>
+        <form style="display: flex;">
+          <input type="email" placeholder="Your Email" style="padding: 10px 20px; width: 70%; border: none; ">
+          <button type="submit" style="padding: 15px 20px; background-color: #28a745; color: #fff; border: none;">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  
+    <div style="display: flex;
+        padding: 20px; width: 80%; margin: auto; padding: 20px;" >
+      <div style="width: 90%;">
+        <p>© Copyright <strong>Company</strong>. All Rights Reserved</p>
+      <p>Designed by <a href="https://bootstrapmade.com/" style="color: #28a745;">BootstrapMade</a></p>
+   
+      </div>
+
+
+      <div style="width: 30%;">
+        <a href="#"><i class="fa-brands fa-twitter twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a>
+
+
+        
+      </div>
+    </div>
+ 
+  </footer>
+  <button class="button1">
+    <a href="#index"><i class="fa-solid fa-arrow-up" style="font-size: 19px;"></i></a>
+</button>
+</body>
+</html>
