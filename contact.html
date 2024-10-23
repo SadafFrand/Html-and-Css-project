@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+nav {
+  width: 100%;
+  padding: 20px 0;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: -1px 12px 24px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-all-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav-all-content .logo {
+  width: 30%;
+}
+
+.nav-all-content .logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-all-content .logo a .green {
+  color: #1bbd36;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-all-content .nav-links {
+  text-align: right;
+  width: 80%;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.nav-links ul li .active-link {
+  color: #1bbd36;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.nav-links ul li .inactive-links {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.content {
+  display: inline-block;
+}
+
+.content:hover .under-content {
+  display: block;
+}
+
+.under-content {
+  background-color: white;
+  display: none;
+  position: absolute;
+  border-top: 2px solid #1bbd36;
+  z-index: 1;
+}
+
+.under-content a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.under-content a:hover {
+  color: #1bbd36;
+}
+
+.content-1 {
+  display: inline-block;
+}
+
+.content-1:hover .under-content-1 {
+  display: block;
+}
+
+.under-content-1 {
+  width: 150px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  right: -150px;
+  top: 100px;
+  border-top: 2px solid #1bbd36;
+  z-index: 1;
+}
+
+.under-content-1 a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.under-content-1 a:hover {
+  color: #1bbd36;
+}
+
+.nav-links ul li .inactive-links:hover {
+  color: #1bbd36;
+}
+
+.nav-links ul li .top-icons {
+  color: darkgray;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0px 8px;
+  display: block;
+}
+
+.nav-links ul li .top-icons:hover {
+  color: #1bbd36;
+}
+.breadcrumbs {
+    padding: 15px 0;
+    background: #1bbd36;
+    min-height: 40px;
+    margin-top: 72px;
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.d-flex {
+    display: flex !important;
+    width: 80%;
+    margin: auto;
+}
+.breadcrumbs h2 {
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.breadcrumbs ol li+li {
+    padding-left: 10px;
+}
+.breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #fff;
+    content: "/";
+}
+a{
+   text-decoration: none;
+   color: #fff;
+}
+.sec{
+    /* width: 100%; */
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    background-color:rgb(250, 255, 255);
+    box-shadow: -1px 12px 24px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+   
+
+}
+.sec1{
+    text-align: center;
+    padding-top: 20px;
+    
+
+}
+.sec2{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+
+    
+}
+.sec3{
+    display: flex;   
+ background-color: white;
+ padding: 10px;
+ margin: 25px;
+}
+#ii{
+   color:#1bbd36;
+   /* border: 1px solid #1bbd36; */
+   /* border-radius: 5psx; */
+   font-size: 35px;
+}
+.New h2,p{
+    padding: 8px;
+}
+
+body {
+   font-family: Arial, sans-serif;
+
+  }
+        .form-container {
+            max-width: 80%;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: -1px 12px 24px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-row input {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-full {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .form-btn {
+            width: 30%;
+            margin: auto;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left:30% ;
+          
+        }
+        .form-btn:hover {
+            background-color: #45a049;
+        }
+        .twitter{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.facebook{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.linkedin{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.instagram{
+    font-size: 18px;
+    /* display: inline-block; */
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 4px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+.button1{
+    width: 65px;
+    background-color: #1bbd36;
+    position: sticky;
+    left: 90%;
+    bottom: 3%; 
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+</style>
+
+<body>
+    
+
+<nav>
+      <div class="nav-all-content">
+        <div class="logo">
+          <a href="index.html"><span class="green">COM</span>PANY</a>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a class="active-link" href="index.html">HOME</a></li>
+            <li class="content">
+              <a class="inactive-links" href="#"
+                >ABOUT <i class="fa-solid fa-caret-down"></i
+              ></a>
+              <div class="under-content">
+                <div class="under-item"><a href="#">About Us</a></div>
+                <div class="under-item"><a href="#">Team</a></div>
+                <div class="nuder-item"><a href="#">Testemonials</a></div>
+                <div class="under-item content-1">
+                  <a href="#"
+                    >Deep Drop Down <i class="fa-solid fa-caret-right"></i>
+                  </a>
+                  <div class="under-content-1">
+                    <div class="under-item">
+                      <a href="#">Deep Drop Down1</a>
+                    </div>
+                    <div class="under-item">
+                      <a href="#">Deep Drop Down2</a>
+                    </div>
+                    <div class="nuder-item">
+                      <a href="#">Deep Drop Down3</a>
+                    </div>
+                    <div class="under-item">
+                      <a href="#">Deep Drop Down4</a>
+                    </div>
+                    <div class="under-item">
+                      <a href="#">Deep Drop Down5</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a class="inactive-links" href="services.html">SERVICES</a></li>
+            <li>
+              <a class="inactive-links" href="portfolio.html">PORTFOLIO</a>
+            </li>
+            <li><a class="inactive-links" href="pricing.html">PRICING</a></li>
+            <li><a class="inactive-links" href="blog.html">BLOG</a></li>
+            <li><a class="inactive-links" href="contact.html">CONTACT</a></li>
+            |
+            <li>
+              <a class="top-icons" href="#"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a class="top-icons" href="#"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a class="top-icons" href="#"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a class="top-icons" href="#"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+         <div class="d-flex justify-content-between align-items-center">
+          <h2>CONTACT</h2>
+          <ol>
+           <li><a href="index.html">HOME</a></li>
+           <li><a href="contact.html"></a>CONTACT</li>
+          </ol>
+         </div>
+        </div>
+       </section>
+
+   
+      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3238.1078800746923!2d51.3814418!3d35.7481531!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2s!4v1727463154816!5m2!1sfa!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+
+      <section class="section2" id="index" >
+
+
+      <section class="sec">    
+       <div class="sec2">
+        <div class="sec3">
+            <i class="fa-solid fa-location-dot" id="ii"></i>
+           <div class="New">
+            <h2>Location:</h2>
+            <p>A108 Adam Street <br>
+                New York, NY 535022</p>
+           </div>
+        </div>
+        <div class="sec3">
+            <i class="fa-solid fa-envelope" id="ii"></i>
+            <div class="New">
+            <h2>Email:</h2>
+            <p>info@example.com <br>
+                contact@example.com</p>
+          </div>
+        </div>
+        <div class="sec3">
+           <i class="fa-solid fa-mobile-button" id="ii"></i>
+           <div class="New">
+            <h2>Call:</h2>
+            <p>+1 5589 55488 51 <br>
+                +1 5589 22475 14</p>
+           </div>
+        </div>
+       </div>
+
+       </section>
+
+       <div class="form-container">
+        <form action="#">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email">
+            </div>
+            <input type="text" name="subject" class="form-full" placeholder="Subject">
+            <textarea name="message" class="form-full" rows="5" placeholder="Message"></textarea>
+            <button type="submit" class="form-btn">Send Message</button>
+        </form>
+    </div>
+
+    <footer style="background-color: #222; color: #fff; padding: 20px 0; margin-top: 30px;">
+      <div style="display: flex; justify-content: space-between; max-width: 1200px; margin: auto; padding: 0 20px;">
+    
+        <!-- Company Info Section -->
+        <div style="flex: 1;">
+          <h3>COMPANY</h3><br>
+          <p style="color: rgba(255, 255, 255, 0.6);">A108 Adam Street<br><br>New York, NY 535022<br><br>United States</p><br>
+          <p style="color: rgba(255, 255, 255, 0.6);"><strong>Phone:</strong> +1 5589 55488 55<br><br>
+          <strong style="color: rgba(255, 255, 255, 0.6);">Email:</strong> info@example.com</p>
+        </div>
+    
+        <!-- Useful Links Section -->
+        <div style="flex: 1;">
+          <h4>Useful Links</h4><br>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="home.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Home</a></li><br>
+            <li><a href="about.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">About us</a></li><br>
+            <li><a href="services.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Services</a></li><br>
+            <li><a href="Terms of service.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Terms of service</a></li><br>
+            <li><a href="Privacy policy.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Privacy policy</a></li><br>
+          </ul>
+        </div>
+    
+        <!-- Services Section -->
+        <div style="flex: 1;">
+          <h4>Our Services</h4><br>
+          <ul style="list-style: none; padding: 0;color: rgba(255, 255, 255, 0.6);transition: 0.3s;">
+            <li><a href="Web Design.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Web Design</a></li><br>
+            <li><a href="Web Development.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Web Development</a></li><br>
+            <li><a href="Product Management.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Product Management</a></li><br>
+            <li><a href="Marketing.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Marketing</a></li><br>
+            <li><a href="Graphic Design.html" style="color: rgba(255, 255, 255, 0.6);transition: 0.3s;">Graphic Design</a></li>
+          </ul>
+        </div>
+    
+        <!-- Newsletter Section -->
+        <div style="flex: 1;">
+          <h4>Join Our Newsletter</h4><br><br>
+          <p style="color: rgba(255, 255, 255, 0.6)">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p><br><br><br>
+          <form style="display: flex;">
+            <input type="email" placeholder="Your Email" style="padding: 10px 20px; width: 70%; border: none; ">
+            <button type="submit" style="padding: 15px 20px; background-color: #28a745; color: #fff; border: none;">Subscribe</button>
+          </form>
+        </div>
+  
+      </div>
+    
+      <div style="display: flex;
+          padding: 20px; width: 80%; margin: auto; padding: 20px;" >
+        <div style="width: 90%;">
+          <p>© Copyright <strong>Company</strong>. All Rights Reserved</p>
+        <p>Designed by <a href="https://bootstrapmade.com/" style="color: #28a745;">BootstrapMade</a></p>
+     
+        </div>
+  
+  
+        <div style="width: 30%;">
+          <a href="#"><i class="fa-brands fa-twitter twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a>
+  
+  
+          
+        </div>
+      </div>
+   
+    </footer>
+    <button class="button1">
+      <a href="#index"><i class="fa-solid fa-arrow-up" style="font-size: 19px;"></i></a>
+  </button>
+    </body>
+</html>
+ 
+   
+
+
